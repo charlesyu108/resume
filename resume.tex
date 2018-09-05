@@ -1,0 +1,185 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{fontawesome}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-1in}
+\addtolength{\evensidemargin}{-1in}
+\addtolength{\textwidth}{2in}
+\addtolength{\topmargin}{-1in}
+\addtolength{\textheight}{2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Defining a highlight-color
+\definecolor{highlightColor}{rgb}{0, 0, 0}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large \color{highlightColor}
+}{}{0em}{}[\color{highlightColor}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large #1} & #2 \\
+      #3 & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeResearchItem}[3]{
+  \vspace{-1pt}\item\small{
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+    \end{tabular*}
+    #3
+  }
+  \vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=12pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\textbf{\Huge \color{highlightColor} Charles Yu} \\
+108 Eddy St Apt 21, Ithaca NY, 14850 \\
+
+\faPhone \hspace{2 pt} 650.862.8697
+\hspace{2pt}
+\faEnvelope \hspace{2 pt} \href{mailto:charles.yu108@gmail.com}{charles.yu108@gmail.com}
+\hspace{2pt}
+\faGlobe \hspace{2 pt} \href{http://charlesyu108.github.io/}{charlesyu108.github.io} \\
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Cornell University}{Ithaca, NY}
+      {Computer Science,  M.Eng.}{Jan 2019 -- May 2019} \\
+      \vspace{5pt}
+      \textit{\small Beginning Jan 2019}
+    \resumeSubheading
+      {Cornell University}{Ithaca, NY}
+      {Computer Science, B.A. -- GPA: 3.826}{Aug 2015 -- Dec 2018} \\
+      \vspace{5pt}
+      \textit{\small Minor in Asian American Studies; Dean's List 6 semesters}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Ab Initio Software}{Lexington, MA}
+      {Software Engineering Intern}{Jun 2018 - Aug 2018}
+      \resumeItemListStart
+        \resumeItem {REST-to-DML}
+          {Code generation utility that takes a RESTful API service description (Swagger/OpenAPI) and generates service-specific Ab Initio DML code
+          to call the described endpoint operations.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Workday}{Pleasanton, CA}
+      {Software Engineering Intern}{May 2017 - Aug 2017}
+      \resumeItemListStart
+        \resumeItem{Authorization Engine}
+          {Designed a role-based access control authorization schema \& built an authorization engine for an internal web service.}
+        \resumeItem{Elastic Stack Log Archive}
+          {Built proof-of-concept service for remote server log aggregation, log searching, and log-metric visualization using elastic stack.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Knodemy}{Livermore, CA}
+      {iOS Development Intern}{Jun 2016 - Aug 2016}
+      \resumeItemListStart
+        \resumeItem{K'nnect Mobile App}
+          {iOS app to connect students with mentors at hackathons.  Implemented chat service, newsfeed, user-registration, authentication, and Firebase integration.}
+      \resumeItemListEnd
+      \vspace{-8pt}
+  \resumeSubHeadingListEnd
+
+%-------------RESEARCH--------------
+\section{Research}
+  \resumeSubHeadingListStart
+    \resumeResearchItem {Cornell Systems Lab: Blockchain Sharding Solutions} {Feb 2018 - Present}
+      {On-chain sharding solution built on Bitcoin-NG with Emin G{\"u}n Sirer, Soumya Basu, and Kai Mast}
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects \& Portfolio Pieces}
+  \resumeSubHeadingListStart
+    \resumeSubItem {peoplethink -- \href{http://peoplethink.herokuapp.com/} {\faGlobe \hspace{1pt} peoplethink.herokuapp.com} }
+      {Ad-hoc information retrieval system for exploring the opinions andsentiments of niche communities on any topic imaginable.  Built on Q\&A pairs from the top 1000 Reddit /r/IAMA postsof all time (as of March 2017) }
+    \resumeSubItem {The Wine Network -- \href{http://charlesyu108.github.io/wineviz/} {\faGlobe \hspace{1pt} charlesyu108.github.io/wineviz} }
+       {Interactive d3 visualization for exploring wine varietals through a graph network. Varietal similarity determined through analysis of textual review features.}
+    \resumeSubItem {AnnouncementBot}
+      {GroupMe mass notification and announcement system.}
+  \resumeSubHeadingListEnd
+
+%-----------ADDITIONAL-----------------
+\section{Addittional}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Languages}
+      {\textbf{[Proficient]} Python, JavaScript, OCaml, Java
+      \textbf{[Familiar]} Scala, Swift, C, Ab Initio}
+    \resumeSubItem{Tools and Frameworks}
+      {d3.js, Heroku, Play Framework,
+       Flask, Django, scikit-learn, AngularJS, Elastic (ELK) Stack, MongoDB}
+    \resumeSubItem{Extracurricular Activities}
+      {CS 3110 (Functional Programming) Course Staff -- Fall 2018,
+       CS 4300 (Information Retrieval) Course Staff -- Spring 2018,
+       Sigma Phi Epsilon, Lifestyle Blogger for the Cornell Daily Sun }
+    \resumeSubItem{Interests}
+      {Music, Pour-over coffee, Writing, Fishing, Thrifting}
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
